@@ -92,7 +92,7 @@ public class CountryDetailFragment extends Fragment {
         GlideToVectorYou.init().with(getActivity()).withListener(new GlideToVectorYouListener() {
             @Override
             public void onLoadFailed() {
-                Log.e(TAG, "onLoadFailed: .....");
+                imageViewFlag.setBackgroundResource(R.drawable.broke);
             }
 
             @Override

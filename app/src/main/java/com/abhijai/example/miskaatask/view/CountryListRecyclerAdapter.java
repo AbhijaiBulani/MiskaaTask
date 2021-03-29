@@ -15,13 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.abhijai.example.miskaatask.R;
 import com.abhijai.example.miskaatask.models.CountryResponse;
+import com.bumptech.glide.request.RequestOptions;
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYouListener;
 
 public class CountryListRecyclerAdapter extends ListAdapter<CountryResponse, CountryListRecyclerAdapter.CountryViewHolder>{
 
-    private static final String TAG = "NetworkBoundResourceO";
-    private CountryClickListener mListener;
+    private static final String TAG = "CountryListRecyO";
+    private final CountryClickListener mListener;
     protected CountryListRecyclerAdapter(CountryClickListener listener) {
         super(new CountryDiffItemCallback());
         mListener = listener;
@@ -53,12 +54,11 @@ public class CountryListRecyclerAdapter extends ListAdapter<CountryResponse, Cou
             init();
             textViewCountryName.setText(response.getName());
             textViewCapitalName.setText(response.getCapital());
-            Log.e(TAG, "bindItems: "+response.getFlag());
-            //Glide.with(mView).load("https://static.toiimg.com/thumb/77480569/India-Flag.jpg?width=1200&height=900").into(imageView);
             GlideToVectorYou.init().with(mView.getContext()).withListener(new GlideToVectorYouListener() {
                 @Override
                 public void onLoadFailed() {
                     Log.e(TAG, "onLoadFailed: .....");
+                    imageView.setBackgroundResource(R.drawable.broke);
                 }
 
                 @Override
