@@ -22,11 +22,9 @@ public class CountriesViewModel extends AndroidViewModel
     private static final String TAG = "NetworkBoundResourceO";
     private final CountriesRepository repository;
     private final MediatorLiveData<Resource<List<CountryResponse>>> result = new MediatorLiveData<>();
-    private final MutableLiveData<CountryResponse> countryResponse = new MutableLiveData<>();
 
     public CountriesViewModel(@NonNull Application application) {
         super(application);
-        Log.e(TAG, "------------- VIEW_MODEL_INITIALISED ----------------------");
         repository = CountriesRepository.getRepositoryInstance(application);
         getData(Helper.isNetworkAvailable(application));
     }
@@ -59,7 +57,6 @@ public class CountriesViewModel extends AndroidViewModel
 
 
     public LiveData<CountryResponse> getSingleCountry(String name){
-        countryResponse.setValue(repository.getSingleCountryDetails(name).getValue());
         return repository.getSingleCountryDetails(name);
     }
 }
