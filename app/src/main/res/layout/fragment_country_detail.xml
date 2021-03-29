@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.CountryDetailFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_countryFlagDetail"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_countryFlagDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Country: India"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_countryNameDetail"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_countryNameDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Capital: New Delhi"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_capitalDetail"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_capitalDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Region: Asia"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_regionDetail"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_regionDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Sub-region: Asia"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_subRegionDetail"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subRegionDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Population: 1000000"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_populationDetail"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_populationDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Borders: Asia"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_borderDetail"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_borderDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Languages: Asia"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_languageDetail"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

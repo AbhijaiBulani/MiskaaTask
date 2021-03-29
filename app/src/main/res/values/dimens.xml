@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="country_title_sp">20sp</dimen>
+    <dimen name="country_sub_title_sp">14sp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+</resources>
